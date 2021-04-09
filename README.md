@@ -11,7 +11,8 @@
     sudo chmod 766 /usr/local/bin/ssr 
 # 接下来我们通过脚本安装SSR
     ssr install 
-    ssr config         配置文件路径 /usr/local/share/shadowsocksr/config.json
+    ssr config 
+    配置文件路径 /usr/local/share/shadowsocksr/config.json
 # 配置ShadowsocksR ，第一次安装完成之后回自动打开配置文件，如下所示：
     {
     "server": "服务器地址",
