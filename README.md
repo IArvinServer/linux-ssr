@@ -13,13 +13,13 @@
     ssr config   配置文件路径 /usr/local/share/shadowsocksr/config.json
 # 配置ShadowsocksR ，第一次安装完成之后回自动打开配置文件，如下所示：
     {
-    "server": "61.54.25.113",
+    "server": "服务器地址",
     "server_ipv6": "::",
-    "server_port": 62264,
+    "server_port": 端口,
     "local_address": "127.0.0.1",
     "local_port": 1080,
 
-    "password": "sPb0AHdX3l1J",
+    "password": "密码",
     "method": "aes-256-cfb",
     "protocol": "origin",
     "protocol_param": "",
