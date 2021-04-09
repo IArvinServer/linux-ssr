@@ -4,7 +4,7 @@
 # 安装ShadowsocksR 或者 SSR 脚本
     wget https://github.com/the0demiurge/CharlesScripts/raw/master/charles/bin/ssr 
     或者
-    git clone https://github.com/IArvinServer/Linux-ssr.git        再 cd Linux-ssr
+    git clone https://github.com/IArvinServer/linux-ssr.git        再 cd linux-ssr
 # 这个脚本算是写的比较完善了，里面封装了 SSR 的安装、配置、启动、关闭等功能。为了方便操作，我们将脚本放进 /usr/local/bin 中
     sudo mv ssr /usr/local/bin 
     sudo chmod 766 /usr/local/bin/ssr 
