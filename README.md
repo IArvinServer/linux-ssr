@@ -42,18 +42,18 @@
 # 最终发现 privoxy 好一些。
 # 安装配置privoxy
 # 如果你想使用 polipo ，请跳过本节。
-    sudo apt-get install privoxy        #安装privoxy
+    sudo apt-get install -y privoxy        #安装privoxy
     sudo vim /etc/privoxy/config        #配置privoxy
     通过 / 搜索 listen-address 192.168.0.1:8118 第773行
     config配置，然后将前面的 # 去掉，然后修改为 listen-address  127.0.0.1:8118 
     （端口号可以自行更改，后面必须一致），取消 listen-address [::1]:8118 前面的注释，不用修改。
     搜索 forward-socks5t ，第1388行，（没找到可以新建一行），然后将内容修改为如下内容：
-    forward-socks5t / 127.0.0.1:1080 .
+    forward-socks5t / 127.0.0.1:9050
 注意最后的那个点是必须写的。
 # 重启privoxy
     sudo service privoxy start
 # 安装配置polipo，如果你已经安装了 privoxy 可以跳过这一步。
-    sudo apt-get install polipo 
+    sudo apt-get install -y polipo 
     sudo vim /etc/polipo/config 
 # 配置文件修改如下：
     logSyslog = true
