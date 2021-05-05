@@ -38,10 +38,9 @@
     "fast_open": false
 }
 # 注意替换配置中的相关节点信息，配置好之后会自动启动SSR，如果输出的日志没有提示错误的话，那么 ShadowsocksR 的配置就完成了。
-# 将SOCKS代理转换为HTTP代理，我尝试过 privoxy 和 polipo 。
-# 最终发现 privoxy 好一些。
+# 将SOCKS代理转换为HTTP代理，
 # 安装配置privoxy
-# 如果你想使用 polipo ，请跳过本节。
+
     sudo apt-get install -y privoxy        #安装privoxy
     sudo vim /etc/privoxy/config        #配置privoxy
     通过 / 搜索 listen-address 192.168.0.1:8118 第773行
@@ -52,24 +51,6 @@
 注意最后的那个点是必须写的。
 # 重启privoxy
     sudo service privoxy start
-# 安装配置polipo，如果你已经安装了 privoxy 可以跳过这一步。
-    sudo apt-get install -y polipo 
-    sudo vim /etc/polipo/config 
-# 配置文件修改如下：
-    logSyslog = true
-    logFile = /var/log/polipo/polipo.log
-    proxyAddress = "0.0.0.0"
-    socksParentProxy = "127.0.0.1:1080"
-    socksProxyType = socks5
-    chunkHighMark = 50331648
-    objectHighMark = 16384
-    serverMaxSlots = 64
-    serverSlots = 16
-    serverSlots1 = 32
-由于对 polipo 不是很了解，所以具体是什么意思我也不清楚。
-# 重启polipo
-    sudo /etc/init.d/polipo restart 
-# 使用 privoxy 默认的HTTP代理端口是 8118 ，使用 polipo 默认的HTTP代理端口是 8123
 # 剩下的就看你想怎么使用了，现在我的HTTP代理的端口是 8118 ，如果我想让 apt 走代理，那么执行下面的
 # 操作配置环境变量
 # 设置http 和 https 全局代理
