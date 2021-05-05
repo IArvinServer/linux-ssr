@@ -1,4 +1,4 @@
-# 安装git，这个 SSR 脚本会使用git自动将SSR下载到本地，所以在这里我们先安装git
+# 安装git，这个 SSR 脚本会使用git自动将SSR下载到本地，先安装git
     sudo apt-get update 
     sudo apt-get install git 
 # 安装ShadowsocksR 或者 SSR 脚本
