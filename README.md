@@ -63,8 +63,8 @@
     curl www.google.com 
  如果有输出证明代理成功。
 # 如果是像我一样拉LineageOS的源码编译，那么就给 git 配置代理，不用 HTTP 代理，直接使用 SOCKS 代理：
-    git config --global http.proxy 'socks5://127.0.0.1:8118' 
-    git config --global https.proxy 'socks5://127.0.0.1:8118' 
+    git config --global http.proxy 'socks5://127.0.0.1:9050' 
+    git config --global https.proxy 'socks5://127.0.0.1:9050' 
 # 取消代理
     git config --global --unset http.proxy 
     git config --global --unset https.proxy 
