@@ -17,7 +17,7 @@
     "server_ipv6": "::",
     "server_port": 端口,
     "local_address": "127.0.0.1",
-    "local_port": 1080,
+    "local_port": 9050,
 
     "password": "密码",
     "method": "aes-256-cfb",
@@ -44,8 +44,8 @@
     sudo apt-get install -y privoxy        #安装privoxy
     sudo vim /etc/privoxy/config        #配置privoxy
     通过 / 搜索 listen-address 192.168.0.1:8118 第773行
-    config配置，然后将前面的 # 去掉，然后修改为 listen-address  127.0.0.1:8118 
-    （端口号可以自行更改，后面必须一致），取消 listen-address [::1]:8118 前面的注释，不用修改。
+    config配置，然后将前面的 # 去掉，然后修改为 listen-address  127.0.0.1:9050 
+    （端口号可以自行更改，后面必须一致），取消 listen-address [::1]:9050 前面的注释，不用修改。
     搜索 forward-socks5t ，第1388行，（没找到可以新建一行），然后将内容修改为如下内容：
     forward-socks5t / 127.0.0.1:9050
 注意最后的那个点是必须写的。
@@ -54,8 +54,8 @@
 # 剩下的就看你想怎么使用了，现在我的HTTP代理的端口是 8118 ，如果我想让 apt 走代理，那么执行下面的
 # 操作配置环境变量
 # 设置http 和 https 全局代理
-    export http_proxy='http://localhost:8118' 
-    export https_proxy='http://localhost:8118' 
+    export http_proxy='http://localhost:9050' 
+    export https_proxy='http://localhost:9050' 
 # 取消代理
     unset http_proxy 
     unset https_proxy 
