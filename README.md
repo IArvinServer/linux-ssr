@@ -17,7 +17,7 @@
     "server_ipv6": "::",
     "server_port": 端口,
     "local_address": "127.0.0.1",
-    "local_port": 9050,
+    "local_port": 8118,
 
     "password": "密码",
     "method": "aes-256-cfb",
